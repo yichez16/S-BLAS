@@ -12,15 +12,15 @@
 # ------------------------------------------------------------------------
 
 # environment parameters
-CUDA_INSTALL_PATH ?= /usr/local/cuda
-CUDA_SAMPLES_PATH ?= /usr/local/cuda/samples
+CUDA_INSTALL_PATH = /usr/local/cuda-9.1
+CUDA_SAMPLES_PATH = /usr/local/cuda-9.1/samples
 
 #compiler
 NVCC = $(CUDA_INSTALL_PATH)/bin/nvcc
 CC = g++
 
 #nvcc parameters
-NVCC_FLAGS = -O3 -w -m64 -gencode=arch=compute_70,code=compute_70 
+NVCC_FLAGS = -O3 -w -m64 -gencode=arch=compute_60,code=compute_60 
 
 #debugging
 #NVCC_FLAGS = -O0 -g -G -m64 -gencode=arch=compute_70,code=compute_70 
